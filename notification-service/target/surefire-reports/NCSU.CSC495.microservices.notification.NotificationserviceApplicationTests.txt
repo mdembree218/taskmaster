@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: NCSU.CSC495.microservices.notification.NotificationserviceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.137 s -- in NCSU.CSC495.microservices.notification.NotificationserviceApplicationTests
