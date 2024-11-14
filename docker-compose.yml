@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  user-service:
+    image: mdembree/user-service:latest
+    build:
+      context: ./user-service/
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8083"
+    networks:
+      - app-network
+
+  task-service:
+    image: mdembree/task-service:latest
+    build:
+      context: ./task-service/
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - app-network
+
+  notification-service:
+    image: mdembree/notification-service:latest
+    build:
+      context: ./notification-service/
+      dockerfile: Dockerfile
+    ports:
+      - "8084:8084"
+    networks:
+      - app-network
+
+  gateway:
+    image: mdembree/taskmaster-gateway:latest
+    build:
+      context: ./gateway/
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+
+  frontend:
+    image: mdembree/taskmaster-frontend:latest
+    build:
+      context: ./task-manager/
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    depends_on:
+      - gateway
+      - user-service
+      - task-service
+      - notification-service
+
+networks:
+  app-network:
+    driver: bridge

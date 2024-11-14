@@ -1,0 +1,357 @@
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headers */
+h1, h2, h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Form styling */
+form, .new-comment, .new-reminder, .task-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="datetime-local"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+button, .button {
+  padding: 8px 16px;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover, .button:hover {
+  background-color: #2980b9;
+}
+
+/* List styling */
+ul {
+  list-style-type: none;
+}
+
+.comments-list, .reminders-list, .tasks-list {
+  margin-top: 10px;
+}
+
+.comment-item, .reminder-item, .task-item {
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-item:hover, .reminder-item:hover, .task-item:hover {
+  background-color: #dce1e3;
+}
+
+/* Specific component styling */
+.comment-container .new-comment textarea,
+.login-container input,
+.register-container input {
+  height: 100px;
+  resize: vertical;
+}
+
+/* Error and Success Messages */
+.error, .error-message {
+  color: #e74c3c;
+  font-size: 0.9em;
+}
+
+.success-message {
+  color: #27ae60;
+  font-size: 0.9em;
+}
+
+/* Login & Register Forms */
+.login-container, .register-container {
+  max-width: 400px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.no-account-label, .register-link {
+  font-size: 0.9em;
+  color: #2c3e50;
+}
+
+.register-link {
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+/* Reminder Actions */
+.reminder-action-button {
+  padding: 4px 8px;
+  font-size: 0.9em;
+  color: #333;
+  background-color: #bdc3c7;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.reminder-action-button:hover {
+  background-color: #a6b0b3;
+}
+
+/* User Settings */
+.settings-container {
+  padding: 20px;
+}
+
+.settings-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.settings-section {
+  margin-bottom: 20px;
+}
+
+.settings-button {
+  background-color: #3498db;
+  margin-top: 10px;
+}
+
+.settings-button:hover {
+  background-color: #2980b9;
+}
+
+.settings-button.delete {
+  background-color: #e74c3c;
+}
+
+.settings-button.delete:hover {
+  background-color: #c0392b;
+}
+
+/* Task input and summary sections */
+.task-summary, .user-summary {
+  padding: 15px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.user-summary h4 {
+  color: #3498db;
+}
+
+.user-summary p, .task-summary p {
+  margin: 5px 0;
+}
+
+/* Accessibility-focused styles */
+input:focus, textarea:focus, select:focus, button:focus {
+  outline: 2px solid #3498db;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .container, .login-container, .register-container, .settings-container {
+    padding: 15px;
+  }
+}
+
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container styling */
+.container, .categories-container, .dashboard-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headers */
+h2, h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.header {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button, .button {
+  padding: 8px 16px;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover, .button:hover {
+  background-color: #2980b9;
+}
+
+.categories-list, .tasks-list {
+  margin-top: 10px;
+}
+
+.category-item, .task-item, .dashboard-nav li {
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-item:hover, .task-item:hover {
+  background-color: #dce1e3;
+}
+
+/* Category actions */
+.category-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.category-action-button {
+  padding: 4px 8px;
+  font-size: 0.9em;
+  color: #333;
+  background-color: #bdc3c7;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.category-action-button:hover {
+  background-color: #a6b0b3;
+}
+
+/* Dashboard Navigation */
+.dashboard-nav ul {
+  display: flex;
+  gap: 10px;
+}
+
+.dashboard-nav li {
+  padding: 8px;
+}
+
+.dashboard-content {
+  margin-top: 20px;
+}
+
+/* Tasks summary */
+.task-summary p {
+  margin: 5px 0;
+}
+
+/* Buttons for states */
+button:disabled, .button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Logout button */
+button.logout {
+  background-color: #e74c3c;
+}
+
+button.logout:hover {
+  background-color: #c0392b;
+}
+
+/* Accessibility-focused styles */
+input:focus, button:focus {
+  outline: 2px solid #3498db;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .container, .categories-container, .dashboard-container {
+    padding: 15px;
+  }
+
+  .dashboard-nav ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .category-actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+

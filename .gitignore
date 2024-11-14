@@ -1,0 +1,12 @@
+# Ignore build files
+/user-service/target/
+/task-service/target/
+
+# Ignore IDE folders
+/.idea/
+/.vscode/
+
+# Ignore other common files
+/taskmaster-frontend/node_modules/
+.DS_Store
+*.log
